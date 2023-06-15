@@ -3,9 +3,23 @@
     margin: auto;
     
 
-    // &:not(:last-child) {
-    //     margin-bottom: $gutter-vertical;
-    // }
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 55rem;
+        padding: 0  3rem;
+    }
+
+    @include respond(phone) {
+        max-width: 90%;
+        text-align: center;
+    }
 
     @include clearfix;
 
@@ -29,9 +43,17 @@
         
         float: left;
         
-
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
         }
     }
     

@@ -16,6 +16,11 @@
         text-align: center;
         cursor: pointer;
 
+        @include respond(tab-port) {
+            top: 3rem;
+            right: 3rem;
+        }
+
     }
 
     &__background {
@@ -29,6 +34,11 @@
         z-index: 5;
 
         transition: all .6s cubic-bezier(0.83, 0, 0.17, 1);
+
+        @include respond(tab-port) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
